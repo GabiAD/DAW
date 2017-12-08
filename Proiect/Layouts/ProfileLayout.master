@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Layouts/BaseLayout.master" AutoEventWireup="true" CodeFile="ProfileLayout.master.cs" Inherits="Layouts_ProfileLayout" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBase" Runat="Server">
+
+    <div class="container">
+
+        <asp:LoginView ID="LoginView1" runat="server">
+        <LoggedInTemplate>
+            
+            <div class="profile-top-container">
+                <div class="profile-picture">
+                    <asp:Image ID="ProfilePicture" runat="server" CssClass="main-profile-picture"/>
+                </div>
+                
+                <asp:Label ID="ProfileName" runat="server" Text="Label" CssClass="profile-name">Ion Vasile</asp:Label>
+
+                <div class="profile-menu-container">
+                    <div class="profile-menu">
+                        <asp:HyperLink CssClass="profile-menu-option" ID="HyperLink3" runat="server" NavigateUrl="~/Pages/Content/Profile.aspx">Profile</asp:HyperLink>
+                        <asp:HyperLink CssClass="profile-menu-option" ID="HyperLink2" runat="server" NavigateUrl="~/Pages/Content/EditProfile.aspx">Edit profile</asp:HyperLink>
+                        <asp:HyperLink CssClass="profile-menu-option" ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Content/AddPhoto.aspx">Add photos</asp:HyperLink>
+                        <asp:HyperLink CssClass="profile-menu-option" ID="HyperLink4" runat="server" NavigateUrl="~/Pages/Content/AddAlbum.aspx">Add album</asp:HyperLink>
+                    </div>
+                </div>
+            </div>
+
+        </LoggedInTemplate>
+    </asp:LoginView>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderProfile" runat="server">
+            <%--  content goes here --%>
+        </asp:ContentPlaceHolder>
+    </div>
+
+</asp:Content>
+

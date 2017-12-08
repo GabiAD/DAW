@@ -1,0 +1,365 @@
+﻿body {
+    overflow-y: scroll;
+}
+
+html, body, body form {
+    height: 100%;
+}
+
+.login-table table {
+    margin: auto;
+}
+
+.auth-screen {
+    background: url("./imgs/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.main-navbar {
+    position: relative;
+    z-index: 99999;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-top-container {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    background-color: #1889d3;
+    margin: 0 0 10px 0;
+}
+
+.profile-picture {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    width: 140px;
+    height: 140px;
+    z-index: 2;
+    background-image: url("");
+    background-color: #2270a4;
+}
+
+.profile-name {
+    text-align: center;
+    display: block;
+    margin: auto;
+    position: relative;
+    left: 55px;
+    top: 80px;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 0 0 2px #000000, 0 0 1px #000000;
+}
+
+.profile-menu-container  {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.profile-menu {
+    position: relative;
+    padding: 9px 0 0 150px;
+    user-select: none;
+    cursor: default;
+}
+
+.profile-menu-option {
+    display: inline-block;
+    color: #ffffff;
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+.profile-menu-option:hover {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+
+.flex-gallery {
+    position: relative;
+    left: -.5vw;
+    padding: 0;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+    width: calc(100% + 1vw);
+}
+
+.flex-gallery > .flex-gallery-thumbnail {
+    position: relative;
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 300px;
+    margin: .5vw;
+    cursor: pointer;
+    max-height: 200px;
+}
+
+.flex-gallery > .flex-gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album-caption {
+    position: absolute;
+    font-size: 14px;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.flex-gallery > .flex-gallery-thumbnail:hover .album-caption {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.flex-gallery-small {
+    position: relative;
+    left: -.5vw;
+    padding: 0;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: flex;
+    align-content: space-between;
+    width: calc(100% + 1vw);
+}
+
+.flex-gallery-small > .flex-gallery-thumbnail {
+    position: relative;
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: auto;
+    height: 140px;
+    margin: .5vw;
+    cursor: pointer;
+}
+
+.flex-gallery-small > .flex-gallery-thumbnail img {
+    height: 100%;
+    width: auto;
+}
+
+.main-profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-page-container {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-color: rgb(242, 243, 243);
+}
+
+.img-container {
+    width: 70%;
+    height: 100%;
+    background-color: #000;
+    float: left;
+}
+
+    .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+.comment-section-container {
+    position: relative;
+    width: 30%;
+    float: left;
+}
+
+.caption {
+    height: 55px;
+    background-color: #ffffff;
+    padding: 10px 0;
+    margin: 10px;
+    overflow-y: auto;
+}
+
+.photo-view-profile-picture {
+    width: 60px;
+    height: 60px;
+}
+
+    .photo-view-profile-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 10px;
+    }
+
+.photo-user-name {
+    position: absolute;
+    top: 22px;
+    left: 90px;
+}
+
+.photo-description {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #c0c0c0;
+}
+
+.comment-section {
+    height: 367px;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: #c0c0c0;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.comment-container {
+    position: relative;
+    margin: 0 0 25px 0;
+}
+
+.comment-name {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #1d64a7;
+}
+
+.own-comment-container {
+    width: 100%;
+    padding: 15px 10px 5px 10px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #c0c0c0;
+    height: 47px;
+}
+
+.comment-box {
+    width: calc(100% - 25px);
+}
+
+.post-comment-button {
+    margin-left: 4px;
+}
+
+.delete-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+    color: #000000;
+}
+
+.delete-button:hover {
+    opacity: 1;
+    color: #d31818;
+}
+
+.delete-small {
+    display: none;
+    font-size: 11px;
+    opacity: .5;
+}
+
+.comment-container:hover .delete-small {
+    display: block;
+}
+
+.pictures-row {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 0 25px 0;
+}
+
+.galerry-picture {
+    height: 100%;
+    width: auto;
+    margin-right: 5px;
+}
+
+.picture-row-gradient {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 25px;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background: linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    z-index: 10;
+}
+
+.login-title {
+    color: #ffffff;
+    position: relative;
+    top: -20px;
+    font-size: 20px;
+    left: -5px;
+}
+
+.login-label {
+    color: #ffffff;
+}
+
+.login-CheckBoxStyle {
+    position: relative;
+    color: #ffffff;
+    font-weight: 500 !important;
+}
+
+.inline-range {
+    position: relative;
+    top: 6px;
+    display: inline-block !important;
+    width: 40% !important;
+}
+
+.btn-default {
+    height: 36px !important;
+}

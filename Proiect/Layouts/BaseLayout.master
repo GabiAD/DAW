@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BaseLayout.master.cs" Inherits="Layouts_BaseLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Proiect DAW - Gabriel Andrei</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Content/main.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+            <div class="navbar navbar-inverse main-navbar"style="margin: 0">
+                <div class="container">
+                    <div class="navbar-header">
+                        <asp:HyperLink class="navbar-brand" NavigateUrl="~/Pages/Content/Home.aspx" runat="server">
+                            <img alt="ProiectDAW" />
+                        </asp:HyperLink>
+                    </div>
+
+                    <div class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <asp:TextBox ID="SearchBox" CssClass="form-control" runat="server" placeholder="Search"></asp:TextBox>
+                        </div>
+                        <asp:LinkButton CssClass="btn btn-primary" ID="SearchButton" runat="server" OnClick="SearchButton_Click"><span class="glyphicon glyphicon-search"></span></asp:LinkButton>
+                    </div>
+
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <LoggedInTemplate>
+                            <p class="navbar-text navbar-right">
+                                Hello,
+                                <asp:HyperLink ID="UserDisplayName" CssClass="navbar-link" runat="server" NavigateUrl="~/Pages/Content/Profile.aspx"></asp:HyperLink>
+                                &ensp;|&ensp;
+                                <asp:LoginStatus CssClass="navbar-link" ID="LoginStatus1" runat="server" />
+                            </p>
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            <p class="navbar-text navbar-right">
+                                <asp:HyperLink CssClass="navbar-link" NavigateUrl="~/Pages/Authentication/Login.aspx" runat="server">Login</asp:HyperLink>
+                                &ensp;|&ensp;
+                                <asp:HyperLink CssClass="navbar-link" NavigateUrl="~/Pages/Authentication/Register.aspx" runat="server">Register</asp:HyperLink>
+                            </p>
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+
+                </div>
+            </div>
+
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderBase" runat="server">
+                <%-- content goes here --%>
+            </asp:ContentPlaceHolder>
+            
+
+    </form>
+</body>
+</html>

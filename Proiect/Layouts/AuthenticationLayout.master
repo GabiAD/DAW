@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Layouts/BaseLayout.master" AutoEventWireup="true" CodeFile="AuthenticationLayout.master.cs" Inherits="Layouts_AuthenticationLayout" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderBase" runat="Server">
+
+    <div class="login-table auth-screen">
+            
+        <div class="outer">
+            <div class="middle">
+                <div class="inner">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderAuthentication" runat="server">
+                        <%--  content goes here --%>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</asp:Content>
+
